@@ -1,7 +1,24 @@
 version: '3'
 
 services:
-  codis:
+  codis-dashboard:
+    image: mycodis
+    expose:
+      - 9090
+      - 18080
+      - 11080
+      - 6379
+      - 19000
+    ports:
+      - 9090:9090
+      - 18080:18080
+      - 6379:6379
+      - 11080:11080
+      - 19000:19000
+    volumes:
+      - ./tmp:/tmp
+    cmd: ./admin/codis-dashboard-admin.sh start-foreground
+  codis-proxy:
     image: mycodis
     expose:
       - 9090
@@ -17,3 +34,38 @@ services:
       - 19000:19000
     volumes:
       - ./data/codis:/tmp/codis
+    cmd: ./admin/codis-proxy-admin.sh start-foreground
+  codis-server:
+    image: mycodis
+    expose:
+      - 9090
+      - 18080
+      - 11080
+      - 6379
+      - 19000
+    ports:
+      - 9090:9090
+      - 18080:18080
+      - 6379:6379
+      - 11080:11080
+      - 19000:19000
+    volumes:
+      - ./data/codis:/tmp/codis
+    cmd: ./admin/codis-server-admin.sh start-foreground
+  codis-fe:
+    image: mycodis
+    expose:
+      - 9090
+      - 18080
+      - 11080
+      - 6379
+      - 19000
+    ports:
+      - 9090:9090
+      - 18080:18080
+      - 6379:6379
+      - 11080:11080
+      - 19000:19000
+    volumes:
+      - ./data/codis:/tmp/codis
+    cmd: ./admin/codis-fe-admin.sh start-foreground

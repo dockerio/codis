@@ -1,4 +1,4 @@
-FROM phusion/baseimage:latest
+FROM ubuntu:latest
 
 MAINTAINER Li Dandan "lidandan2017@gmail.com"
 
@@ -16,13 +16,4 @@ RUN mkdir -p $GOPATH/src/github.com/CodisLabs && \
 RUN cd $GOPATH/src/github.com/CodisLabs/codis && \
     make -j4
 
-WORKDIR $GOPATH/src/github.com/CodisLabs/codis
-
-COPY ./start.sh /opt/go/src/github.com/CodisLabs/codis/start.sh
-
-RUN mkdir -p /etc/my_init.d
-COPY ./run /etc/my_init.d/codis.sh
-RUN chmod +x /etc/my_init.d/codis.sh && \
-    chmod +x /opt/go/src/github.com/CodisLabs/codis/start.sh
-
-CMD ["/sbin/my_init"]
+WORKDIR /opt/go/src/github.com/CodisLabs/codis
