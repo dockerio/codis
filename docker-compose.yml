@@ -16,7 +16,14 @@ services:
       - 11080:11080
       - 19000:19000
     volumes:
-      - ./tmp:/tmp
+      - ./codis/tmp:/tmp
+      - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
+    links:
+      - codis-dashboard
+      - codis-proxy
+      - codis-fe
+      - codis-server
+      - zookeeper
     cmd: ./admin/codis-dashboard-admin.sh start-foreground
   codis-proxy:
     image: mycodis
@@ -33,7 +40,14 @@ services:
       - 11080:11080
       - 19000:19000
     volumes:
-      - ./data/codis:/tmp/codis
+      - ./codis/tmp:/tmp
+      - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
+    links:
+      - codis-dashboard
+      - codis-proxy
+      - codis-fe
+      - codis-server
+      - zookeeper
     cmd: ./admin/codis-proxy-admin.sh start-foreground
   codis-server:
     image: mycodis
@@ -50,7 +64,14 @@ services:
       - 11080:11080
       - 19000:19000
     volumes:
-      - ./data/codis:/tmp/codis
+      - ./codis/tmp:/tmp
+      - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
+    links:
+      - codis-dashboard
+      - codis-proxy
+      - codis-fe
+      - codis-server
+      - zookeeper
     cmd: ./admin/codis-server-admin.sh start-foreground
   codis-fe:
     image: mycodis
@@ -67,5 +88,18 @@ services:
       - 11080:11080
       - 19000:19000
     volumes:
-      - ./data/codis:/tmp/codis
+      - ./codis/tmp:/tmp
+      - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
+    links:
+      - codis-dashboard
+      - codis-proxy
+      - codis-fe
+      - codis-server
+      - zookeeper
     cmd: ./admin/codis-fe-admin.sh start-foreground
+  zookeeper:
+      image: zookeeper
+      ports:
+          - 2181:2181
+      volumes:
+        - ./zookeeper/data:/data
