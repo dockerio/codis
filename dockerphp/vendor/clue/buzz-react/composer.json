@@ -1,0 +1,26 @@
+{
+    "name": "clue/buzz-react",
+    "description": "Simple, async HTTP client for concurrently processing any number of HTTP requests, built on top of React PHP",
+    "keywords": ["HTTP client", "HTTP", "ReactPHP", "async"],
+    "homepage": "https://github.com/clue/php-buzz-react",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Clue\\React\\Buzz\\": "src/" }
+    },
+    "require": {
+    	"php": ">=5.3",
+        "react/event-loop": "0.3.*|0.4.*",
+        "react/http-client": "0.3.*|0.4.*",
+        "react/socket-client": "^0.5 || ^0.4 || ^0.3",
+        "react/dns": "0.3.*|0.4.*",
+        "react/promise": "1.*|2.*",
+        "rize/uri-template": "~0.3.0",
+        "ml/iri": "~1.0"
+    }
+}

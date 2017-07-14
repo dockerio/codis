@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  codis:
+    image: mycodis
+    expose:
+      - 9090
+      - 18080
+      - 11080
+      - 6379
+      - 19000
+    ports:
+      - 9090:9090
+      - 18080:18080
+      - 6379:6379
+      - 11080:11080
+      - 19000:19000
+    volumes:
+      - ./data/codis:/tmp/codis

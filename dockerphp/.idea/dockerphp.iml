@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/clue/buzz-react" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/clue/docker-react" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/clue/json-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/evenement/evenement" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ml/iri" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/dns" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/event-loop" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/socket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/socket-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/stream" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rize/uri-template" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/clue/buzz-react" />
+          <root url="file://$MODULE_DIR$/vendor/clue/docker-react" />
+          <root url="file://$MODULE_DIR$/vendor/clue/json-stream" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/evenement/evenement" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/ml/iri" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/vendor/react/cache" />
+          <root url="file://$MODULE_DIR$/vendor/react/dns" />
+          <root url="file://$MODULE_DIR$/vendor/react/event-loop" />
+          <root url="file://$MODULE_DIR$/vendor/react/http-client" />
+          <root url="file://$MODULE_DIR$/vendor/react/promise" />
+          <root url="file://$MODULE_DIR$/vendor/react/promise-timer" />
+          <root url="file://$MODULE_DIR$/vendor/react/socket" />
+          <root url="file://$MODULE_DIR$/vendor/react/socket-client" />
+          <root url="file://$MODULE_DIR$/vendor/react/stream" />
+          <root url="file://$MODULE_DIR$/vendor/rize/uri-template" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/clue/buzz-react" />
+          <root url="file://$MODULE_DIR$/vendor/clue/docker-react" />
+          <root url="file://$MODULE_DIR$/vendor/clue/json-stream" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/evenement/evenement" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/ml/iri" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/vendor/react/cache" />
+          <root url="file://$MODULE_DIR$/vendor/react/dns" />
+          <root url="file://$MODULE_DIR$/vendor/react/event-loop" />
+          <root url="file://$MODULE_DIR$/vendor/react/http-client" />
+          <root url="file://$MODULE_DIR$/vendor/react/promise" />
+          <root url="file://$MODULE_DIR$/vendor/react/promise-timer" />
+          <root url="file://$MODULE_DIR$/vendor/react/socket" />
+          <root url="file://$MODULE_DIR$/vendor/react/socket-client" />
+          <root url="file://$MODULE_DIR$/vendor/react/stream" />
+          <root url="file://$MODULE_DIR$/vendor/rize/uri-template" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

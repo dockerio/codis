@@ -1,0 +1,5 @@
+{
+	"require": {
+		"clue/docker-react": "~0.2.0"
+	}
+}
