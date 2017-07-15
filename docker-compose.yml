@@ -10,88 +10,41 @@ services:
     volumes:
       - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
       - ./codis/admin:/opt/go/src/github.com/CodisLabs/codis/admin
-    links:
-      - codis-dashboard
-      - codis-proxy
-      - codis-fe
-      - codis-server
-      - zookeeper
-    cmd: ./admin/codis-dashboard-admin.sh start-foreground
+    command: sh ./admin/codis-dashboard-admin.sh start-foreground
   codis-proxy:
     image: mycodis
     expose:
-      - 9090
-      - 18080
       - 11080
-      - 6379
       - 19000
     ports:
-      - 9090:9090
-      - 18080:18080
-      - 6379:6379
       - 11080:11080
       - 19000:19000
     volumes:
       - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
       - ./codis/admin:/opt/go/src/github.com/CodisLabs/codis/admin
-    links:
-      - codis-dashboard
-      - codis-proxy
-      - codis-fe
-      - codis-server
-      - zookeeper
-    cmd: ./admin/codis-proxy-admin.sh start-foreground
+    command: sh ./admin/codis-proxy-admin.sh start-foreground
   codis-server:
     image: mycodis
     expose:
-      - 9090
-      - 18080
-      - 11080
       - 6379
-      - 19000
-    ports:
-      - 9090:9090
-      - 18080:18080
-      - 6379:6379
-      - 11080:11080
-      - 19000:19000
     volumes:
       - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
       - ./codis/admin:/opt/go/src/github.com/CodisLabs/codis/admin
-    links:
-      - codis-dashboard
-      - codis-proxy
-      - codis-fe
-      - codis-server
-      - zookeeper
-    cmd: ./admin/codis-server-admin.sh start-foreground
+    command: sh ./admin/codis-server-admin.sh start
   codis-fe:
     image: mycodis
     expose:
       - 9090
-      - 18080
-      - 11080
-      - 6379
-      - 19000
     ports:
       - 9090:9090
-      - 18080:18080
-      - 6379:6379
-      - 11080:11080
-      - 19000:19000
     volumes:
       - ./codis/config:/opt/go/src/github.com/CodisLabs/codis/config
       - ./codis/admin:/opt/go/src/github.com/CodisLabs/codis/admin
-    links:
-      - codis-dashboard
-      - codis-proxy
-      - codis-fe
-      - codis-server
-      - zookeeper
-    cmd: ./admin/codis-fe-admin.sh start-foreground
+    command: sh ./admin/codis-fe-admin.sh start-foreground
   zookeeper:
       image: zookeeper
       ports:
           - 2181:2181
       volumes:
         - ./zookeeper/data:/data
+        - ./zookeeper/datalog:/datalog

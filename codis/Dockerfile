@@ -14,6 +14,7 @@ RUN mkdir -p $GOPATH/src/github.com/CodisLabs && \
     cd $GOPATH/src/github.com/CodisLabs && git clone https://github.com/CodisLabs/codis.git
 
 RUN cd $GOPATH/src/github.com/CodisLabs/codis && \
-    make -j4
+    make -j4 && \
+    apt-get -y install iputils-ping
 
 WORKDIR /opt/go/src/github.com/CodisLabs/codis
